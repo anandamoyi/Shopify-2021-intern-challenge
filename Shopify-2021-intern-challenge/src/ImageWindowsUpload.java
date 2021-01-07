@@ -23,7 +23,7 @@ private final Group group;
 	public static void main (String[] args) {
 		launch(args);
 	}
-	//zasaswas
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		

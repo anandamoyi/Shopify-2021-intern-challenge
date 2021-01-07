@@ -37,7 +37,7 @@ public class ImageRepository extends Application {
 	public static void setImageUrl(String url) {
 		imageUrl = url;
 	}
-	//asxasaxas
+	
 	@Override
 	   public void start(Stage stage) {
 		  String path = imageUrl;
