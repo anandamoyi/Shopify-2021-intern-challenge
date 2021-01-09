@@ -9,14 +9,14 @@ import javafx.stage.Stage;
 
 public class ImageRepositoryMenu extends Application {
 
-	private final Group group;
+	private final Group groupTwo;
 	
 	public ImageRepositoryMenu() {
-		group = new Group();
+		groupTwo = new Group();
 	}
 	
 	public Group getGroup() {
-		return group;
+		return groupTwo;
 	}
 	
 	public static void main (String[] args) {
@@ -31,7 +31,7 @@ public class ImageRepositoryMenu extends Application {
 		imageUploadOption.setLayoutX(20);
 		imageUploadOption.setLayoutY(50);
 		imageUploadOption.setFont(f);
-		group.getChildren().add(imageUploadOption);
+		groupTwo.getChildren().add(imageUploadOption);
 		
 		Button imageUrl = new Button("Image url");
 		Button windowsPath = new Button("Windows file path");
@@ -44,9 +44,9 @@ public class ImageRepositoryMenu extends Application {
 		macPath.setLayoutX(700);
 		macPath.setLayoutY(500);
 		
-		group.getChildren().add(imageUrl);
-		group.getChildren().add(windowsPath);
-		group.getChildren().add(macPath);
+		groupTwo.getChildren().add(imageUrl);
+		groupTwo.getChildren().add(windowsPath);
+		groupTwo.getChildren().add(macPath);
 		
 		imageUrl.setOnAction(e -> {
 			ImageUrlUpload imageUrlUpload = new ImageUrlUpload();
@@ -87,9 +87,9 @@ public class ImageRepositoryMenu extends Application {
 			
 		});
 		
-		Scene scene = new Scene(group, 900, 1000, Color.BEIGE);
+		Scene scene = new Scene(groupTwo, 900, 1000, Color.BEIGE);
 		primaryStage.setScene(scene);
-		primaryStage.getScene().setRoot(group);
+		
         primaryStage.setResizable(false);
 		primaryStage.show();
 		
