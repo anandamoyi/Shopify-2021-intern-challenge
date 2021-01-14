@@ -10,14 +10,14 @@ import javafx.stage.Stage;
 
 public class ImageMacUpload extends Application {
 	
-private final Group group;
+private final Group groupThree;
 	
 	public ImageMacUpload() {
-		group = new Group();
+		groupThree = new Group();
 	}
 	
 	public Group getGroup() {
-		return group;
+		return groupThree;
 	}
 	
 	public static void main (String[] args) {
@@ -34,7 +34,7 @@ private final Group group;
 		h.setSpacing(10);
 		h.setLayoutX(100);
 		h.setLayoutY(100);
-		group.getChildren().add(h);
+		groupThree.getChildren().add(h);
 		
 		Button previousMenu = new Button("Back to menu");
 		previousMenu.setLayoutX(0);
@@ -45,11 +45,11 @@ private final Group group;
 		Button imageRepository = new Button("Image Repository");
 		imageRepository.setLayoutX(700);
 		imageRepository.setLayoutY(700);
-		group.getChildren().add(imageRepository);
-		group.getChildren().add(previousMenu);
-		group.getChildren().add(upload);
+		//group.getChildren().add(imageRepository);
+		groupThree.getChildren().add(previousMenu);
+		groupThree.getChildren().add(upload);
 		
-		//zazqwsqw
+		
 		
 		previousMenu.setOnAction(e -> {
 			ImageRepositoryMenu imageRepositoryMenu = new ImageRepositoryMenu();
@@ -66,9 +66,17 @@ private final Group group;
 		
 		upload.setOnAction(e -> {
 			ImageRepository.setImageUrl("file:"+imageUrlField.getText());
+			ImageRepository repository = new ImageRepository();
+			primaryStage.getScene().setRoot(repository.getGroup());
+			try {
+				repository.start(primaryStage);
+			} catch(Exception e1) {
+				e1.printStackTrace();
+				
+			}
 			
 		});
-		
+		/**
        imageRepository.setOnAction(e -> {
 			
 			ImageRepository repository = new ImageRepository();
@@ -81,11 +89,11 @@ private final Group group;
 			}
 			
 		});
+		**/
 		
 		
-		Scene scene = new Scene(group, 900, 1000, Color.BEIGE);
-		primaryStage.setScene(scene);
-		primaryStage.getScene().setRoot(group);
+		
+		primaryStage.getScene().setRoot(groupThree);
         primaryStage.setResizable(false);
 		primaryStage.show();
 	}

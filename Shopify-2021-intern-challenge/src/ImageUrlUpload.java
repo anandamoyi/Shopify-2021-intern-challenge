@@ -23,7 +23,7 @@ public class ImageUrlUpload extends Application {
 	public static void main (String[] args) {
 		launch(args);
 	}
-	//szsqwsqw
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -44,7 +44,7 @@ public class ImageUrlUpload extends Application {
 		Button imageRepository = new Button("Image Repository");
 		imageRepository.setLayoutX(700);
 		imageRepository.setLayoutY(700);
-		group.getChildren().add(imageRepository);
+		//group.getChildren().add(imageRepository);
 		group.getChildren().add(previousMenu);
 		group.getChildren().add(upload);
 		
@@ -52,10 +52,19 @@ public class ImageUrlUpload extends Application {
 		
 		upload.setOnAction(e -> {
 			ImageRepository.setImageUrl(imageUrlField.getText());
+			ImageRepository repository = new ImageRepository();
+			primaryStage.getScene().setRoot(repository.getGroup());
+			try {
+				repository.start(primaryStage);
+			} catch(Exception e1) {
+				e1.printStackTrace();
+				
+			}
 			
 			
 		});
 		
+		/**
 		imageRepository.setOnAction(e -> {
 			
 			ImageRepository repository = new ImageRepository();
@@ -68,6 +77,7 @@ public class ImageUrlUpload extends Application {
 			}
 			
 		});
+		**/
 		
 		previousMenu.setOnAction(e -> {
 			ImageRepositoryMenu imageRepositoryMenu = new ImageRepositoryMenu();
@@ -83,8 +93,7 @@ public class ImageUrlUpload extends Application {
 		});
 		
 		
-		Scene scene = new Scene(group, 900, 1000, Color.BEIGE);
-		primaryStage.setScene(scene);
+		
 		primaryStage.getScene().setRoot(group);
         primaryStage.setResizable(false);
 		primaryStage.show();

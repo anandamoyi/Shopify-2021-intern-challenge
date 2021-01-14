@@ -10,20 +10,20 @@ import javafx.stage.Stage;
 
 public class ImageWindowsUpload extends Application {
 	
-private final Group group;
+private final Group groupFour;
 	
 	public ImageWindowsUpload() {
-		group = new Group();
+		groupFour = new Group();
 	}
 	
 	public Group getGroup() {
-		return group;
+		return groupFour;
 	}
 	
 	public static void main (String[] args) {
 		launch(args);
 	}
-	//xsqsqs
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
@@ -34,7 +34,7 @@ private final Group group;
 		h.setSpacing(10);
 		h.setLayoutX(100);
 		h.setLayoutY(100);
-		group.getChildren().add(h);
+		groupFour.getChildren().add(h);
 		
 		Button previousMenu = new Button("Back to menu");
 		previousMenu.setLayoutX(0);
@@ -45,9 +45,9 @@ private final Group group;
 		Button imageRepository = new Button("Image Repository");
 		imageRepository.setLayoutX(700);
 		imageRepository.setLayoutY(700);
-		group.getChildren().add(imageRepository);
-		group.getChildren().add(previousMenu);
-		group.getChildren().add(upload);
+		//group.getChildren().add(imageRepository);
+		groupFour.getChildren().add(previousMenu);
+		groupFour.getChildren().add(upload);
 		
 		previousMenu.setOnAction(e -> {
 			ImageRepositoryMenu imageRepositoryMenu = new ImageRepositoryMenu();
@@ -64,8 +64,18 @@ private final Group group;
 		
 		upload.setOnAction(e -> {
 			ImageRepository.setImageUrl("file:///C:"+imageUrlField.getText());
+			ImageRepository repository = new ImageRepository();
+			primaryStage.getScene().setRoot(repository.getGroup());
+			try {
+				repository.start(primaryStage);
+			} catch(Exception e1) {
+				e1.printStackTrace();
+				
+			}
 			
 		});
+		
+		/**
 		
        imageRepository.setOnAction(e -> {
 			
@@ -79,11 +89,11 @@ private final Group group;
 			}
 			
 		});
+		**/
 		
 		
-		Scene scene = new Scene(group, 900, 1000, Color.BEIGE);
-		primaryStage.setScene(scene);
-		primaryStage.getScene().setRoot(group);
+		
+		primaryStage.getScene().setRoot(groupFour);
         primaryStage.setResizable(false);
 		primaryStage.show();
 	}
