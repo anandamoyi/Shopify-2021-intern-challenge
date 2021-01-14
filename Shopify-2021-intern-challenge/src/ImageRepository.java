@@ -30,6 +30,7 @@ public class ImageRepository extends Application {
 	private int index = 0;
 	
 	String name;
+	String age;
 	
 	
 	public ImageRepository() {
