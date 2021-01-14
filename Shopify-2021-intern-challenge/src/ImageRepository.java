@@ -22,6 +22,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
+/**
+ * 
+ * Pages where uploaded images will be added and stored
+ *
+ */
 public class ImageRepository extends Application {
 	
 	private final Group group;
@@ -29,8 +34,7 @@ public class ImageRepository extends Application {
 	private Properties prop2 = new Properties();
 	private int index = 0;
 	
-	String name;
-	String age;
+	
 	
 	
 	public ImageRepository() {
