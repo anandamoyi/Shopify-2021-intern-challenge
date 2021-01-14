@@ -29,7 +29,7 @@ public class ImageRepository extends Application {
 	private Properties prop2 = new Properties();
 	private int index = 0;
 	
-	
+	String name;
 	
 	
 	public ImageRepository() {
