@@ -6,8 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
+import javafx.stage.Stage; // commit d40623401fdfd35a91f7aba7f6440010d140e02f
 
+//User can upload images using Windows image directory
 public class ImageWindowsUpload extends Application {
 	
 private final Group groupFour;
