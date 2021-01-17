@@ -8,6 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+// User can upload images using mac local directory url
 public class ImageMacUpload extends Application {
 	
 private final Group groupThree;
