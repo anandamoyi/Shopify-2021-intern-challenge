@@ -24,46 +24,15 @@ private final Group groupFour;
 	public static void main (String[] args) {
 		launch(args);
 	}
+	/**
+	 *  nx xnsjsbddbdbcdbcbdcdbccc
+	 *  xsndsbchdschdsbchdsbchdsbchsd
+	 *  xdsncjdsbchdschdsvchgsdv
+	 */
 	
-	@Override
+	//@Override
 	//creates UI
-	public void start(Stage primaryStage) throws Exception {
-		
-		TextField imageUrlField = new TextField();
-		Label imageUrl = new Label("Enter the image file path: ");
-		Label ex = new Label("ex: /Users/username/Pictures/camera/test/1.JPG");
-		HBox h = new HBox(imageUrl,imageUrlField,ex);
-		h.setSpacing(10);
-		h.setLayoutX(100);
-		h.setLayoutY(100);
-		groupFour.getChildren().add(h);
-		
-		Button previousMenu = new Button("Back to menu");
-		previousMenu.setLayoutX(0);
-		previousMenu.setLayoutY(0);
-		Button upload = new Button("Upload");
-		upload.setLayoutX(100);
-		upload.setLayoutY(200);
-		Button imageRepository = new Button("Image Repository");
-		imageRepository.setLayoutX(700);
-		imageRepository.setLayoutY(700);
-		//group.getChildren().add(imageRepository);
-		groupFour.getChildren().add(previousMenu);
-		groupFour.getChildren().add(upload);
-		
-		previousMenu.setOnAction(e -> {
-			ImageRepositoryMenu imageRepositoryMenu = new ImageRepositoryMenu();
-			primaryStage.getScene().setRoot(imageRepositoryMenu.getGroup());
-			try {
-				imageRepositoryMenu.start(primaryStage);
-			} catch(Exception e1) {
-				
-				e1.printStackTrace();
-				
-			}
-			
-		});
-		
+	/**
 		upload.setOnAction(e -> {
 			ImageRepository.setImageUrl("file:///C:"+imageUrlField.getText());
 			ImageRepository repository = new ImageRepository();
@@ -95,9 +64,10 @@ private final Group groupFour;
 		
 		
 		
-		primaryStage.getScene().setRoot(groupFour);
-        primaryStage.setResizable(false);
-		primaryStage.show();
-	}
+		//primaryStage.getScene().setRoot(groupFour);
+       // primaryStage.setResizable(false);
+		//primaryStage.show();
+		**/ 
+	//}
 
 }
