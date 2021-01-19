@@ -8,7 +8,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage; 
 
-//User can upload images using Windows image directory
+//User can upload images using Windows image local directory
 public class ImageWindowsUpload extends Application {
 	
 private final Group groupFour;
