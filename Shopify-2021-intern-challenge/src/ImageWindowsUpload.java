@@ -9,21 +9,10 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage; 
 
 //User can upload images using Windows image directory
-public class ImageWindowUpload extends Application {
-	// 16d5c7e514c37b62e7d24b724551bf1ed0930e4b
-private final Group groupFour;
-	
-	public ImageWindowsUpload() {
-		groupFour = new Group();
-	}
-	
-	public Group getGroup() {
-		return groupFour;
-	}
-	
-	public static void main (String[] args) {
-		launch(args);
-	}
+/**
+bszuaxx xsjncjhbdhjdbcj nx 
+xsm csdbcsx
+**/
 	
 	@Override
 	//creates UI
